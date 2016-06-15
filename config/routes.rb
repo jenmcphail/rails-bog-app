@@ -13,6 +13,12 @@ Rails.application.routes.draw do
   #SHOWs individual creature
   get "/creatures/:id", to: "creatures#show", as: "creature"
 
+  #GETs edit form for creature
+  get "/creatures/:id/edit", to: "creatures#edit", as: "edit_creature"
+
+  #UPDATEs creature
+  patch "/creatures/:id", to: "creatures#update"
+
 
 
 end
